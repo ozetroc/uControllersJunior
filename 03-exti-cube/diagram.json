@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-st-nucleo-l031k6", "id": "nucleo", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 54.2,
+      "left": -96,
+      "attrs": { "color": "green", "bounce": "0", "key": "i" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 129.6,
+      "left": -134.95,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "$serialMonitor:TX", "nucleo:VCP_RX", "", [] ],
+    [ "$serialMonitor:RX", "nucleo:VCP_TX", "", [] ],
+    [ "nucleo:D2", "btn1:2.r", "green", [ "h-25.25", "v10.81" ] ],
+    [ "nucleo:GND.1", "btn1:1.r", "black", [ "h0" ] ],
+    [ "nucleo:3V3", "r1:2", "green", [ "h22.15", "v58.81", "h-192", "v-104.95" ] ],
+    [ "r1:1", "btn1:2.l", "green", [ "h0", "v-19.2" ] ]
+  ],
+  "dependencies": {}
+}

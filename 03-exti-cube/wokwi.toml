@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'Debug/03-exti-cube.elf'
+elf = 'Debug/03-exti-cube.elf'
