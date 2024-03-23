@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'Debug/05-adc-cube.elf'
+elf = 'Debug/05-adc-cube.elf'
